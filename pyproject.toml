@@ -1,0 +1,41 @@
+[project]
+name = "wp3-d-quest"
+version = "0.1.0"
+description = "Data package for the questionnaire from Work Package 3 of the DP-Next project."
+authors = [
+  {name = "Kristiane Beicher", email = "kris.beicher@clin.au.dk"},
+  {name = "Luke W. Johnston", email = "lwjohnst@gmail.com"},
+  # TODO: Add the other authors (Kristina, Daniel, Jonas, Mikkel, etc)
+]
+maintainers = [
+  {name = "Kristiane Beicher", email = "kris.beicher@clin.au.dk" },
+  {name = "Luke W. Johnston", email = "lwjohnst@gmail.com" },
+]
+readme = "README.md"
+license = "MIT AND CC0-1.0"
+license-files = ["LICENSE-MIT.md", "LICENSE.md"]
+requires-python = ">=3.12"
+dependencies = [
+    "polars>=1.41.2",
+    "seedcase-flower>=0.29.0",
+    "seedcase-sprout>=0.51.0",
+]
+
+[project.urls]
+# TODO: Add URLs relevant to the project.
+# homepage = ""
+repository = "https://github.com/seedcase-project/wp3-d-quest"
+issues = "https://github.com/seedcase-project/wp3-d-quest/issues"
+changelog = "https://github.com/seedcase-project/wp3-d-quest/blob/main/CHANGELOG.md"
+
+[tool.ruff]
+extend = ".config/ruff.toml"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+
+[dependency-groups]
+dev = [
+    "mypy>=2.1.0",
+]

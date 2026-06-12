@@ -1,0 +1,34 @@
+{
+  "editor.formatOnSave": true,
+  "editor.snippetSuggestions": "inline",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always"
+  },
+  "autoDocstring.customTemplatePath": ".vscode/google-notypes.mustache",
+  "conventional-branch.type": [
+    "build",
+    "ci",
+    "docs",
+    "feat",
+    "fix",
+    "refactor",
+    "style",
+    "test",
+    "chore",
+    "perf",
+    "revert"
+  ],
+  "conventional-branch.format": "{Type}/{Branch}",
+  "[quarto][qmd][md]": {
+    "editor.defaultFormatter": "jolars.panache"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv",
+  "python.languageServer": "Pylance",
+  "mypy.runUsingActiveInterpreter": true,
+  "files.insertFinalNewline": true,
+  "conventionalCommits.emojiFormat": "emoji",
+  "conventionalCommits.promptScopes": false
+}

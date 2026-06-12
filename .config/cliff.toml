@@ -2,10 +2,9 @@
 # Strictly don't connect to the internet to generate the changelog.
 offline = false
 
-# TODO: Fill in the owner and repo so that the links in the changelog work correctly.
 [remote.github]
-owner = ""
-repo = ""
+owner = "dp-next"
+repo = "wp3-d-quest"
 
 [changelog]
 # A Tera template to be rendered for each release in the changelog.
@@ -105,9 +104,8 @@ output = "CHANGELOG.md"
 
 [git]
 commit_preprocessors = [
-  # TODO: Replace USER and REPO with the actual values.
   # Replace pull request numbers with links to GitHub.
-  { pattern = '\((\w+\s)?#([0-9]+)\)', replace = "[#${2}](https://github.com/USER/REPO/pull/${2})" },
+  { pattern = '\((\w+\s)?#([0-9]+)\)', replace = "[#${2}](https://github.com/dp-next/wp3-d-quest/pull/${2})" },
   # Check spelling of the commit message using https://github.com/crate-ci/typos.
   # If the spelling is incorrect, it will be fixed automatically.
   { pattern = '.*', replace_command = 'uvx typos --write-changes -' },

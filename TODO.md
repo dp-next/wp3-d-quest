@@ -1,14 +1,13 @@
-- Review the
-  [template guide](https://template-data-package.seedcase-project.org/docs/guide/)
-  for more information on how to use the template and the next steps after
-  copying the project.
-- Install these packages: `uv add polars seedcase-sprout seedcase-flower` and
-  `uv add --dev mypy` to install development packages.
+- Review the [template
+  guide](https://template-data-package.seedcase-project.org/docs/guide/) for
+  more information on how to use the template and the next steps after copying
+  the project.
 - Run `just list-todos` and complete all the TODO items, committing (all) files
   as you go along.
 - Run `just install-precommit` to install the pre-commit hooks.
-- Run `just build-readme` to build the Markdown version of the README. - Install the [`spaid`](https://github.com/seedcase-project/spaid) CLI tool and
-  run these setup steps:
+- Run `just build-readme` to build the Markdown version of the README. - Install
+  the [`spaid`](https://github.com/seedcase-project/spaid) CLI tool and run
+  these setup steps:
   - `spaid_gh_create_repo_from_local -h` to create a GitHub repository from the
     local repository.
   - `spaid_gh_set_repo_settings -h` to set the repository settings.
@@ -21,7 +20,8 @@
   - Create an `UPDATE_VERSION_TOKEN` and `ADD_TO_BOARD_TOKEN` secret for the
     GitHub Apps if you haven't already and connect them to the repository.
   - Create an `UPDATE_VERSION_APP_ID` and `ADD_TO_BOARD_APP_ID` variable of the
-    GitHub Apps' IDs if you haven't already and connect them to the repository. - Connect the repository to Netlify and turn off the builds on Netlify, since
-  you will be using GitHub Actions to build and deploy the website.
+    GitHub Apps' IDs if you haven't already and connect them to the repository. -
+    Connect the repository to Netlify and turn off the builds on Netlify, since
+    you will be using GitHub Actions to build and deploy the website.
 - If relevant, connect [pre-commit.ci](https://pre-commit.ci/) to the repository
   and enable the pre-commit hooks.

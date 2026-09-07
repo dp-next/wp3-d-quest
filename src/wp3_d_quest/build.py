@@ -12,9 +12,9 @@ SRC = Path(str(files("wp3_d_quest"))).joinpath("..").resolve()
 BLD = SRC.joinpath("..", "bld").resolve()
 
 BLD_REDCAP = BLD / "redcap"
-
 METADATA_PATH = BLD_REDCAP / "metadata.json"
-DATAPACKAGE_PATH = SRC / "datapackage.json"
+
+DATAPACKAGE_PATH = SRC.parent / "datapackage.json"
 
 
 @mark.metadata

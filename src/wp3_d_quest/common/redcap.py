@@ -17,12 +17,14 @@ class APIConfig:
 class Center(Enum):
     """The centers in the study."""
 
-    Odense = APIConfig(env_key="REDCAP_ODN_API_KEY", url="https://redcap.sdu.dk/api/")
+    Open = APIConfig(
+        env_key="REDCAP_OPEN_API_KEY", url="https://open.rsyd.dk/redcap/api/"
+    )
 
 
 def get(
     request_data: dict[str, str],
-    center: Center = Center.Odense,
+    center: Center = Center.Open,
 ) -> requests.Response:
     """Send a request to the REDCap API."""
     token = os.environ.get(center.value.env_key)
@@ -39,7 +41,7 @@ def get(
 
 def get_json(
     content: Literal["metadata", "repeatingFormsEvents", "formEventMapping"],
-    center: Center = Center.Odense,
+    center: Center = Center.Open,
 ) -> Any:
     """Send a request to the REDCap API and return the JSON response."""
     request_data = {

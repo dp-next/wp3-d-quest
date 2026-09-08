@@ -20,6 +20,10 @@ def create_package_properties(metadata: list[dict[str, Any]]) -> sp.SproutProper
 def _create_resource_properties(
     redcap_fields: list[dict[str, str]],
 ) -> list[sp.ResourceProperties]:
+    # Discard the participant_id field, which is added to each resource separately.
+    redcap_fields = so.keep(
+        redcap_fields, lambda field: field["field_name"] != "participant_id"
+    )
     sorted_by_form = sorted(redcap_fields, key=lambda field: field["form_name"])
     grouped_by_form = groupby(sorted_by_form, key=lambda field: field["form_name"])
     return so.fmap(
@@ -31,6 +35,14 @@ def _create_resource_properties(
 def _form_to_resource(
     form_name: str, fields: list[dict[str, str]]
 ) -> sp.ResourceProperties:
+    participant_id_field = sp.FieldProperties(
+        name="participant_id",
+        title="The unique ID of the participant",
+        type="string",
+        description=("The unique ID of the participant."),
+        constraints=sp.ConstraintsProperties(required=True),
+    )
+
     # Discard fields displayed for information only and checkbox fields,
     # which are processed separately.
     form_redcap_fields = so.keep(
@@ -67,8 +79,8 @@ def _form_to_resource(
         title=form_name,
         description=form_name,
         schema=sp.TableSchemaProperties(
-            # TODO: fill in primary key
-            fields=form_fields + checkbox_fields,
+            primary_key=["participant_id"],
+            fields=[participant_id_field] + form_fields + checkbox_fields,
         ),
     )
 

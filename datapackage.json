@@ -11,6 +11,15 @@
       "schema": {
         "fields": [
           {
+            "name": "participant_id",
+            "title": "The unique ID of the participant",
+            "type": "string",
+            "description": "The unique ID of the participant.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
             "name": "myfas_end",
             "title": "myfas_end",
             "type": "datetime",
@@ -91,6 +100,9 @@
               "Nej, jeg ønsker ikke at blive kontaktet"
             ]
           }
+        ],
+        "primaryKey": [
+          "participant_id"
         ]
       }
     },
@@ -101,6 +113,15 @@
       "description": "consent",
       "schema": {
         "fields": [
+          {
+            "name": "participant_id",
+            "title": "The unique ID of the participant",
+            "type": "string",
+            "description": "The unique ID of the participant.",
+            "constraints": {
+              "required": true
+            }
+          },
           {
             "name": "participate",
             "title": "participate",
@@ -118,6 +139,9 @@
               "Nej"
             ]
           }
+        ],
+        "primaryKey": [
+          "participant_id"
         ]
       }
     },
@@ -128,6 +152,15 @@
       "description": "dp_next",
       "schema": {
         "fields": [
+          {
+            "name": "participant_id",
+            "title": "The unique ID of the participant",
+            "type": "string",
+            "description": "The unique ID of the participant.",
+            "constraints": {
+              "required": true
+            }
+          },
           {
             "name": "background_start",
             "title": "background_start",
@@ -4750,6 +4783,9 @@
               "required": false
             }
           }
+        ],
+        "primaryKey": [
+          "participant_id"
         ]
       }
     },
@@ -4762,9 +4798,9 @@
         "fields": [
           {
             "name": "participant_id",
-            "title": "participant_id",
+            "title": "The unique ID of the participant",
             "type": "string",
-            "description": "Every participant will get a participant ID",
+            "description": "The unique ID of the participant.",
             "constraints": {
               "required": true
             }
@@ -4857,6 +4893,9 @@
               "required": false
             }
           }
+        ],
+        "primaryKey": [
+          "participant_id"
         ]
       }
     }

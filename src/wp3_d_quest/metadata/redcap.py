@@ -73,7 +73,7 @@ def _form_to_resource(
         name="participant_id",
         title="The unique ID of the participant",
         type="string",
-        description=("The unique ID of the participant."),
+        description="The unique ID of the participant.",
         constraints=sp.ConstraintsProperties(required=True),
     )
 

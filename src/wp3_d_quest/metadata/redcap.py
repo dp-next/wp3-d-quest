@@ -9,10 +9,44 @@ import seedcase_sprout as sp
 
 def create_package_properties(metadata: list[dict[str, Any]]) -> sp.SproutProperties:
     """Create package properties from the REDCap metadata."""
-    return sp.SproutProperties(
+    return sp.SproutProperties.from_default(
         name="wp3-d-quest",
         title="WP3-D Quest",
         description="Data package for WP3 of the DP-Next project.",
+        homepage="https://dp-next.github.io/",
+        contributors=[
+            sp.ContributorProperties(
+                title="Kristiane Beicher",
+                email="kris.beicher@clin.au.dk",
+                given_name="Kristiane",
+                family_name="Beicher",
+                organization="Steno Diabetes Centre Aarhus",
+                roles=["DataManager", "DataCurator", "ContactPerson"],
+            ),
+            sp.ContributorProperties(
+                title="Luke W Johnston",
+                email="lwjohnst@clin.au.dk",
+                given_name="Luke",
+                family_name="Johnston",
+                organization="Steno Diabetes Centre Aarhus",
+                roles=["DataManager", "DataCurator"],
+            ),
+            sp.ContributorProperties(
+                title="Marton Vago",
+                email="mvago@clin.au.dk",
+                given_name="Marton",
+                family_name="Vago",
+                organization="Steno Diabetes Centre Aarhus",
+                roles=["DataManager", "DataCurator"],
+            ),
+        ],
+        licenses=[
+            sp.LicenseProperties(
+                name="CC0-1.0",
+                path="https://creativecommons.org/publicdomain/zero/1.0/",
+                title="CC0 1.0 Universal",
+            ),
+        ],
         resources=_create_resource_properties(metadata),
     )
 

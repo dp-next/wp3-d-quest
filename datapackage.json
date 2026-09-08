@@ -1,7 +1,54 @@
 {
   "name": "wp3-d-quest",
+  "id": "0b14e351-79ee-4790-a3d5-ba087e38b24f",
   "title": "WP3-D Quest",
   "description": "Data package for WP3 of the DP-Next project.",
+  "homepage": "https://dp-next.github.io/",
+  "version": "0.1.0",
+  "created": "2026-09-08T16:35:37+02:00",
+  "contributors": [
+    {
+      "title": "Kristiane Beicher",
+      "email": "kris.beicher@clin.au.dk",
+      "givenName": "Kristiane",
+      "familyName": "Beicher",
+      "organization": "Steno Diabetes Centre Aarhus",
+      "roles": [
+        "DataManager",
+        "DataCurator",
+        "ContactPerson"
+      ]
+    },
+    {
+      "title": "Luke W Johnston",
+      "email": "lwjohnst@clin.au.dk",
+      "givenName": "Luke",
+      "familyName": "Johnston",
+      "organization": "Steno Diabetes Centre Aarhus",
+      "roles": [
+        "DataManager",
+        "DataCurator"
+      ]
+    },
+    {
+      "title": "Marton Vago",
+      "email": "mvago@clin.au.dk",
+      "givenName": "Marton",
+      "familyName": "Vago",
+      "organization": "Steno Diabetes Centre Aarhus",
+      "roles": [
+        "DataManager",
+        "DataCurator"
+      ]
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC0-1.0",
+      "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "title": "CC0 1.0 Universal"
+    }
+  ],
   "resources": [
     {
       "name": "completion",

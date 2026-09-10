@@ -27,8 +27,10 @@ LFS](https://decisions.seedcase-project.org/why-git-lfs/) stores within
 [GenomeDK](https://genome.au.dk) and no personal data is uploaded to
 GitHub. Only metadata and documentation is publicly accessible.
 
-Check out our [website]() for more information, such as the
-[metadata](./docs/) on the data package and its contents.
+Check out our [website](https://dp-next.github.io/wp3-d-quest) for more
+information, such as the
+[metadata](https://dp-next.github.io/wp3-d-quest/docs/metadata/) on the
+data package and its contents.
 
 > [!TIP]
 >

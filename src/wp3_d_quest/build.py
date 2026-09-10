@@ -33,5 +33,5 @@ def task_create_datapackage_json(
 ) -> None:
     """Create the datapackage.json file from the REDCap metadata."""
     redcap_metadata = common.json.read(metadata_path)
-    datapackage = metadata.redcap.create_datapackage(redcap_metadata)
-    common.json.write(datapackage_path, datapackage)
+    package_properties = metadata.redcap.create_package_properties(redcap_metadata)
+    common.json.write(datapackage_path, package_properties.compact_dict)

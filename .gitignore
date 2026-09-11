@@ -27,10 +27,7 @@ __pycache__/
 *.py[cod]
 
 # Raw data files and folders
-*.parquet
-*.csv
 /data-raw/
-/raw/
 /data/
 
 # MacOS
@@ -53,3 +50,6 @@ docs/index.qmd
 
 # Misc files
 *.log
+
+# Pytask products
+bld/
